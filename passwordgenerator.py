@@ -46,18 +46,18 @@ class PasswordGenerator:
             for _ in range(length - 4):
                 password.append(random.choice(ac))
             random.shuffle(password)
-            password = "".join(password)
-            self.result_entry.delete(0, tk.END)
-            self.result_entry.insert(tk.END, password)
+            password="".join(password)
+            self.result_entry.delete(0,tk.END)
+            self.result_entry.insert(tk.END,password)
         except ValueError:
-            messagebox.showerror("Error", "Invalid password length.")
+            messagebox.showerror("Error","Invalid password length.")
     def copy(self):
-        password = self.result_entry.get()
+        password=self.result_entry.get()
         self.window.clipboard_clear()
         self.window.clipboard_append(password)
-        messagebox.showinfo("Success", "Password copied to clipboard.")
+        messagebox.showinfo("Success","Password copied to clipboard.")
     def run(self):
         self.window.mainloop()
-if __name__ == "__main__":
-    generator = PasswordGenerator()
+if __name__ =="__main__":
+    generator=PasswordGenerator()
     generator.run()
