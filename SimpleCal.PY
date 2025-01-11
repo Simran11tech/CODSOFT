@@ -1,4 +1,4 @@
-#TASK 2
+#TASK 1
 #A SIMPLE CALCULATOR
 import tkinter as tk
 from tkinter import ttk
